@@ -1,3 +1,5 @@
+#Import Libraries 
+
 import mysql.connector
 import pandas as pd
 import sys
@@ -7,11 +9,21 @@ try:
       print("Was able to load the excel file")
 except Exception as e:
       print('could not open DEM_Challenge_Section1_DATASET.xlsx:' + str(e))
-      #sys.exit()
+      sys.exit()
 
+# Connection string to connect to the database
 connection = mysql.connector.connect(
       user='root', password='root', host="mysql", port="3306", database='db')
 print("DB Connected")
+
+# Data transformation and cleaning
+
+# Remove rows that doesn't have a valid gender value.
+
+people = people.loc[people['gender'] != 'Non-binary']
+
+
+# Load the data
 
 cursor = connection.cursor()
 
@@ -34,7 +46,7 @@ connection.commit()
 #people = cursor.fetchall()
 connection.close()
 
-print("ETL is complete. All the data from the excel file has been loaded into mysql db successfully.")
+print("ETL is complete. All the data from the excel file has been loaded into mysql db successfully. Total rows loaded " + str(len(people.index)))
 
-#print(people)
+
 
