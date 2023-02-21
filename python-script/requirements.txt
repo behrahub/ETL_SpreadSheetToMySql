@@ -1,0 +1,5 @@
+mysql-connector-python
+pyodbc
+numpy
+pandas
+openpyxl
