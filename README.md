@@ -1,8 +1,8 @@
-# ETL_SpreadSheetToMySql
+## ETL_SpreadSheetToMySql
 
-## A simple solution to provision a database and ETL data automatically from a spreadsheet
+### A simple solution to provision a database and ETL data automatically from a spreadsheet
 
-## Highlevel illustration
+### Highlevel illustration
 
 ![image](https://user-images.githubusercontent.com/125423433/220273625-42d830ad-6708-473a-95aa-2e7bf493e5b6.png)
 
